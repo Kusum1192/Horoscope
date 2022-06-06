@@ -83,7 +83,9 @@ public class ChooseCardAdapter extends RecyclerView.Adapter<ChooseCardAdapter.vi
                });
                 oa1.start();
             }
+
         });
+
     }
     @Override
     public int getItemCount() {

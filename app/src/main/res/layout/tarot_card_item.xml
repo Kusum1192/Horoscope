@@ -12,5 +12,4 @@
         android:padding="5dp"
         android:focusableInTouchMode="false"
         />
-
 </LinearLayout>

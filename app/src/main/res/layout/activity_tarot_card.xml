@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple_700"
     tools:context=".Activity.ChooseCardActivity">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_tarot_card"
         android:layout_width="match_parent"
@@ -27,6 +28,5 @@
         app:spanCount="6"
         app:flow_horizontalAlign="center"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
