@@ -8,15 +8,13 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.horoscopes.android.Fragment.TodayFragment;
 import com.horoscopes.android.Fragment.TomorrowFragment;
 import com.horoscopes.android.Fragment.YesterdayFragment;
-
-public class DaysAdapter extends FragmentPagerAdapter {
+public class VPDaysAdapter extends FragmentPagerAdapter {
     private final int Item;
 
-    public DaysAdapter(@NonNull FragmentManager fm, int behavior, int item) {
+    public VPDaysAdapter(@NonNull FragmentManager fm, int behavior, int item) {
         super(fm, behavior);
         Item = item;
     }
-
     @NonNull
     @Override
     public Fragment getItem(int position) {
@@ -27,7 +25,6 @@ public class DaysAdapter extends FragmentPagerAdapter {
             default: return null;
         }
     }
-
     @Override
     public int getCount() {
         return Item;

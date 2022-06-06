@@ -17,7 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-import com.horoscopes.android.Adapter.FragmentAdapter;
+import com.horoscopes.android.Adapter.VPHomeAdapter;
 import com.horoscopes.android.BuildConfig;
 import com.horoscopes.android.R;
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     TabItem tab1, tab2;
     ViewPager viewPager;
-    FragmentAdapter fragmentManager;
+    VPHomeAdapter fragmentManager;
     @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        fragmentManager=new FragmentAdapter(getSupportFragmentManager(),
+        fragmentManager=new VPHomeAdapter(getSupportFragmentManager(),
                 FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, tabLayout.getTabCount());
         viewPager.setAdapter(fragmentManager);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

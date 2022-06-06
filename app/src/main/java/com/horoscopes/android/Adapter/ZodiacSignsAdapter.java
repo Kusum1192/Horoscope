@@ -19,11 +19,11 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class ZodiacSignsData extends RecyclerView.Adapter<ZodiacSignsData.viewHolder> {
+public class ZodiacSignsAdapter extends RecyclerView.Adapter<ZodiacSignsAdapter.viewHolder> {
     ArrayList<ZodiacModel> zodiacModelList;
     Context context;
 
-    public ZodiacSignsData(ArrayList<ZodiacModel> zodiacModelList, Context context) {
+    public ZodiacSignsAdapter(ArrayList<ZodiacModel> zodiacModelList, Context context) {
         this.zodiacModelList = zodiacModelList;
         this.context = context;
     }

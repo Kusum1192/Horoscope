@@ -11,7 +11,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.horoscopes.android.ApiClient;
+import com.horoscopes.android.Model.AppOpen;
 import com.horoscopes.android.R;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashScreenActivity extends AppCompatActivity {
@@ -30,8 +36,28 @@ public class SplashScreenActivity extends AppCompatActivity {
                 .fitCenter()
                 .into(splashScreen_iv);
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(SplashScreenActivity.this, LoginActivity.class));
-            finish();
+            getAppopen();
             },2000);
+
     }
+
+    private void getAppopen() {
+        Call<AppOpen> call= ApiClient.getMyInterface().getAppOpen("1","69a89336-0757-40cd-9daf-0e3073998723",
+                "1","1");
+        call.enqueue(new Callback<AppOpen>() {
+            @Override
+            public void onResponse(Call<AppOpen> call, Response<AppOpen> response) {
+                AppOpen appOpen=response.body();
+                if (appOpen != null) {
+                    startActivity(new Intent(SplashScreenActivity.this,LoginActivity.class));
+                    finish();
+                }
+            }
+            @Override
+            public void onFailure(Call<AppOpen> call, Throwable t) {
+
+            }
+        });
+    }
+
 }

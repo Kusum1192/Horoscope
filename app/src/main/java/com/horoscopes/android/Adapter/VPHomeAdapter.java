@@ -8,10 +8,10 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.horoscopes.android.Fragment.HoroscopeFragment;
 import com.horoscopes.android.Fragment.TarotCardFragment;
 
-public class FragmentAdapter extends FragmentPagerAdapter {
+public class VPHomeAdapter extends FragmentPagerAdapter {
 
 
-    public FragmentAdapter(@NonNull FragmentManager fm, int behaviorResumeOnlyCurrentFragment, int tabCount) {
+    public VPHomeAdapter(@NonNull FragmentManager fm, int behaviorResumeOnlyCurrentFragment, int tabCount) {
         super(fm);
     }
 

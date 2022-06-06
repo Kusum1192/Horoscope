@@ -37,7 +37,6 @@ public class TarotCardFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +44,7 @@ public class TarotCardFragment extends Fragment {
         // Inflate the layout for this fragment
         this.view =inflater.inflate(R.layout.fragment_tarotcard, container, false);
         list = new ArrayList<>();
-        list.add(new TarotCardModel(R.drawable.lv_n_rltn, "Love and Relations"));
+        list.add(new TarotCardModel(R.drawable.lv_rltn, "Love and Relations"));
         list.add(new TarotCardModel(R.drawable.money, "Money"));
         list.add(new TarotCardModel(R.drawable.life, "Life"));
         list.add(new TarotCardModel(R.drawable.fmly_n_frds, "Family and Friends"));

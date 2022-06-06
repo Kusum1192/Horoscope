@@ -2,7 +2,6 @@ package com.horoscopes.android.Adapter;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
@@ -78,7 +77,7 @@ public class ChooseCardAdapter extends RecyclerView.Adapter<ChooseCardAdapter.vi
                                intent.putExtra("position", n);
                                context.startActivity(intent);
                            }
-                       },2000);
+                       },1000);
                    }
                });
                 oa1.start();
