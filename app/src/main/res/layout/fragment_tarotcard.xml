@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.TarotCardFragment">
+    <TextView
+        android:id="@+id/title_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:lines="3"
+        android:padding="15dp"
+        android:paddingHorizontal="2dp"
+        android:textColor="@color/white"
+        android:text="@string/future"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTarotCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/tarot_cards"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        android:layout_gravity="center_horizontal"
+
+        />
+</LinearLayout>

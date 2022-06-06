@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+<group android:checkableBehavior="single">
+    <item android:id="@+id/menu_horoscope"
+        android:icon="@drawable/horoscope_ic"
+        android:title="Horoscope"/>
+
+    <item android:id="@+id/menu_tarot_card"
+        android:icon="@drawable/tarot_card_ic"
+        android:title="Tarot Card"/>
+
+    <item android:id="@+id/menu_profile"
+        android:icon="@drawable/profile_ic"
+        android:title="Profile"/>
+
+    <item android:id="@+id/menu_share"
+        android:icon="@drawable/share_ic"
+        android:title="Share with Friends"/>
+
+    <item android:id="@+id/menu_rate_us"
+        android:icon="@drawable/rate_us_ic"
+        android:title="Rate Us"/>
+    <item android:id="@+id/menu_pp"
+        android:icon="@drawable/pp_ic"
+        android:title="Privacy Policy"/>
+    <item android:id="@+id/menu_tns"
+        android:icon="@drawable/t_n_s_ic"
+        android:title="Terms of Services"/>
+</group>
+</menu>
