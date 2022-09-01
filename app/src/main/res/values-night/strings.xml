@@ -5,27 +5,21 @@
     <string name="close">close</string>
     <string name="horoscope">HOROSCOPE</string>
     <string name="horoscope_logo_image">Horoscope Logo Image</string>
-    <string name="terms_condition">By continuing you agree to our <b><u>Terms of Services</u></b> and <b><u>Privacy Policy</u></b></string>
     <string name="sign_in">SIGN IN WITH GOOGLE</string>
     <string name="profile_icon">Profile Icon</string>
-    <string name="dob">dob</string>
-    <string name="alias">alias</string>
     <string name="date">date</string>
-    <string name="today">today</string>
-    <string name="month">Month</string>
-    <string name="week">Week</string>
-    <string name="yesterday">Yesterday</string>
     <string name="what_is_your_name">What is Your name?</string>
-    <string name="enter_your_birth_date">Enter your birth date</string>
     <string name="where_were_you_born">Where were you born?</string>
-    <string name="select_your_date_of_birth">Select Your Date of Birth</string>
+    <string name="date_of_birth">Date of Birth</string>
     <string name="find_your_zodiac">Find your zodiac</string>
     <string name="hello">Hello!</string>
     <string name="detail">Select your Date of Birth and we will prepare an accurate horoscope for you
     and your family and friends</string>
     <string name="birth_details">Birth Details</string>
-    <string name="change_birth_details">Change Birth Details</string>
+    <string name="change_birth_details">Edit Birth Details</string>
     <string name="description">Description</string>
     <string name="male">male</string>
     <string name="female">female</string>
+    <string name="describe">By continuing you agree to our</string>
+    <string name="manglik_description">Since mars is in tenth house and in gemini sign person is Non Manglik.</string>
 </resources>

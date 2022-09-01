@@ -2,68 +2,18 @@
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Fragment.TodayFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!--  <LinearLayout
-       android:layout_below="@+id/date"
-       android:id="@+id/tabMode"
-       android:orientation="vertical"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:padding="12dp"
-       app:layout_constraintTop_toBottomOf="@id/date">
-
-       <TextView
-           android:id="@+id/chip_today"
-           android:textColor="@color/white"
-           android:layout_weight="1"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:textAllCaps="true"
-           android:text="Today"
-           android:padding="12dp"
-/>
-       <TextView
-           android:id="@+id/chip_Love"
-           android:layout_width="wrap_content"
-           android:layout_weight="1"
-           android:layout_height="wrap_content"
-           android:textColor="@color/white"
-           android:textAllCaps="true"
-           android:text="Love"
-/>
-       <TextView
-           android:id="@+id/chip_family"
-           android:layout_width="wrap_content"
-           android:layout_weight="1"
-           android:layout_height="wrap_content"
-           android:textColor="@color/white"
-           android:textAllCaps="true"
-           android:text="Family"
-           android:layout_marginRight="5dp" />
-
-       <TextView
-           android:id="@+id/chip_Carreer"
-           android:layout_width="wrap_content"
-           android:layout_weight="1"
-           android:layout_height="wrap_content"
-           android:textColor="@color/white"
-           android:textAllCaps="true"
-           android:text="Carreer"/>
-
-   </LinearLayout>-->
     <LinearLayout
-        android:id="@+id/contentView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         >
     <TextView
         android:id="@+id/today_description"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/description"
         android:justificationMode="inter_word"
         android:textSize="16sp"

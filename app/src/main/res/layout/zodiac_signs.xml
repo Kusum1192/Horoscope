@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@color/purple_700"
     android:layout_gravity="center_horizontal"
     >
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_icon"
+        >
           <ImageView
             android:id="@+id/zodiac_signs"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/aries"
-            app:tint="@color/white"
-              android:layout_margin="5dp"
-              android:focusableInTouchMode="false"
+              android:src="@drawable/health"
+              android:layout_gravity="center"
             />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/zodiac_title"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/zodiac_signs"
-        android:layout_marginTop="5dp"
+        android:layout_margin="5dp"
         android:ellipsize="end"
         android:gravity="center_horizontal"
         android:lines="1"
+        android:padding="5dp"
         android:text="Signs"
-        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:padding="5dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 </LinearLayout>

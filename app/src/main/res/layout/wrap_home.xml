@@ -11,6 +11,7 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/purple_500"
         app:titleTextColor="@color/white"
+        app:title="Daily Horoscope"
         app:elevation="5dp"
         android:elevation="2dp"
         />
@@ -20,7 +21,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabTextColor="#AEFFFFFF"
-        android:textStyle="bold"
         android:background="@color/purple_500"
         app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
         app:tabIndicatorHeight="2dp"
@@ -31,12 +31,16 @@
             android:id="@+id/tab_horoscope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:fontFamily="sans-serif-light"
             android:text="@string/horoscope_tab" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tab_tarot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:fontFamily="sans-serif-light"
+            android:textStyle="bold"
             android:text="@string/tarot_card" />
 
     </com.google.android.material.tabs.TabLayout>
@@ -45,7 +49,6 @@
         android:id="@+id/vp_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

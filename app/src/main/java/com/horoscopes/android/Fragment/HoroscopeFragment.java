@@ -26,8 +26,6 @@ import java.util.List;
 
 
 public class HoroscopeFragment extends Fragment {
-
-
     private FragmentActivity mActivity;
     ZodiacSignsAdapter zodiacSignsAdapter;
     View view;
@@ -43,13 +41,10 @@ public class HoroscopeFragment extends Fragment {
             mActivity = (FragmentActivity) context;
         }
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,18 +53,18 @@ public class HoroscopeFragment extends Fragment {
         findSign = view.findViewById(R.id.findSign);
         findSign.setOnClickListener(view -> startActivity(new Intent(mActivity, FindSignActivity.class)));
         list = new ArrayList<>();
-        list.add(new ZodiacModel(R.drawable.aries, "Aries", 0, "Hello"));
-        list.add(new ZodiacModel(R.drawable.taurus, "Taurus", 1, ""));
-        list.add(new ZodiacModel(R.drawable.gemini, "Gemini", 2, ""));
-        list.add(new ZodiacModel(R.drawable.cancer, "Cancer", 3, ""));
-        list.add(new ZodiacModel(R.drawable.leo, "Leo", 4, ""));
-        list.add(new ZodiacModel(R.drawable.virgo, "Virgo", 5, ""));
-        list.add(new ZodiacModel(R.drawable.libra, "Libra", 6, ""));
-        list.add(new ZodiacModel(R.drawable.scorpio, "Scorpio", 7, ""));
-        list.add(new ZodiacModel(R.drawable.sagittarius, "Sagittarius", 8, ""));
-        list.add(new ZodiacModel(R.drawable.capricorn, "Capricorn", 9, ""));
-        list.add(new ZodiacModel(R.drawable.aquarius, "Aquarius", 10, ""));
-        list.add(new ZodiacModel(R.drawable.pisces, "Pisces", 11, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/aries.png", "Aries", 0, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/taurus.png", "Taurus", 1, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/gemini.png", "Gemini", 2, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/cancer.png", "Cancer", 3, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/leo.png", "Leo", 4, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/virgo.png", "Virgo", 5, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/libra.png", "Libra", 6, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/scorpio.png", "Scorpio", 7, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/sagittarius.png", "Sagittarius", 8, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/capricorn.png", "Capricorn", 9, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/aquarius.png", "Aquarius", 10, ""));
+        list.add(new ZodiacModel("https://horoscopee.herokuapp.com/pisces.png", "Pisces", 11, ""));
         recyclerView = view.findViewById(R.id.recyclerZodiacSigns);
         zodiacSignsAdapter = new ZodiacSignsAdapter((ArrayList<ZodiacModel>) list, mActivity);
         recyclerView.setAdapter(zodiacSignsAdapter);

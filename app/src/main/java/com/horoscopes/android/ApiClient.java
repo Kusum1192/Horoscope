@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    static String url="https://horoscopee.herokuapp.com/api/v1/";
+    static String url="https://mobnews.app/api/v1/";
 
 private static Retrofit getRetrofit(){
     HttpLoggingInterceptor httpLoggingInterceptor=new HttpLoggingInterceptor();

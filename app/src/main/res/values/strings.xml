@@ -1,30 +1,21 @@
 <resources>
-    <string name="app_name">Horoscope</string>
+    <string name="app_name">Daily Horoscope</string>
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="horoscope">HOROSCOPE</string>
     <string name="horoscope_logo_image">Horoscope Logo Image</string>
-    <string name="terms_condition">By continuing you agree to our <b><u>Terms of Services</u></b> and <b><u>Privacy Policy</u></b></string>
+    <string name="tnc"><b><u>\nTerms and Condition </u> &amp;</b></string>
+    <string name="pp"><b><u>Privacy Policy</u></b></string>
     <string name="sign_in">SIGN IN WITH GOOGLE</string>
     <string name="profile_icon">Profile Icon</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="horoscope_tab">Horoscope</string>
     <string name="future">What does the future have in store for you? Get all your answers from out Tarot Readings.</string>
-    <string name="aries">Aries</string>
-    <string name="dob">Date Range</string>
-    <string name="alias">The Ram</string>
     <string name="date">date</string>
     <string name="tomorrow">Tomorrow</string>
-    <string name="month">Month</string>
-    <string name="week">Week</string>
-    <string name="yesterday">Yesterday</string>
     <string name="what_is_your_name">What is your name?</string>
-    <string name="what_is_your_gender">What is your gender?</string>
-    <string name="enter_your_birth_date">Enter your birth date</string>
     <string name="where_were_you_born">Where were you born?</string>
-    <string name="select_your_date_of_birth">Date of Birth</string>
-    <string name="choose_your_dob">Select</string>
+    <string name="date_of_birth">Date of Birth</string>
     <string name="tarot_card">Tarot Card</string>
     <string name="zodiac_sign">Zodiac Sign</string>
     <string name="your_daily_horoscope_is_ready">Your Daily horoscope is ready!</string>
@@ -33,10 +24,21 @@
     <string name="detail">Select your Date of Birth and we will prepare an accurate horoscope for you
     and your family and friends</string>
     <string name="birth_details">Birth Details</string>
-    <string name="change_birth_details">Change Birth Details</string>
+    <string name="change_birth_details">Edit Birth Details</string>
     <string name="description">Description</string>
-    <string name="male">Male</string>
+    <string name="describe">By signing up, continuing you agree to our </string>
+    <string name="default_web_client_id2">473754589992-fg3ih2fn4251bspnjr59o55jtf0d9qin.apps.googleusercontent.com</string>
+    <string name="manglik_description">Since mars is in tenth house and in gemini sign person is Non Manglik.</string>
+    <string name="view_pager">View Pager</string>
+    <string name="city_name">City Name</string>
+    <string name="choose_your_city">Choose Your city</string>
     <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="submit">Submit</string>
+    <string name="banner">Banner</string>
+    <string name="ad">Ad</string>
+    <string name="card_name">Card Name</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>

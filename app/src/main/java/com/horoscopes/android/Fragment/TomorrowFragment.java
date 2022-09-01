@@ -11,20 +11,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import com.horoscopes.android.ApiClient;
-import com.horoscopes.android.Model.ZodiacDetailsData;
 import com.horoscopes.android.R;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
-
 public class TomorrowFragment extends Fragment {
-    TextView content_tmr;
+
     FragmentActivity mActivity;
-    private String content;
+    TextView contentId;
+    public static TomorrowFragment newInstance(String str) {
+        Bundle args = new Bundle();
+        args.putString("content",str);
+        TomorrowFragment fragment = new TomorrowFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -33,55 +32,19 @@ public class TomorrowFragment extends Fragment {
             mActivity= (FragmentActivity) context;
         }
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_tomorrow, container, false);
-        content_tmr=view.findViewById(R.id.content);
-       // getHoroscopeDetails();
-       // getJsonFileFromLocally();
+        contentId=view.findViewById(R.id.content);
+        //getHoroscopeDetails();
+        Bundle bundle=getArguments();
+        String str=bundle.getString("content");
+        contentId.setText(str);
         return view;
     }
-
-    /*private void getJsonFileFromLocally () {
-        //int id = mActivity.getIntent().getIntExtra("position", 0);
-        try {
-            JSONObject jsonObject = new JSONObject(HoroscopeDetailActivity.loadJSONFromAssets(getContext()));
-            JSONArray zodiacList = jsonObject.getJSONArray("zodiacList");
-            String zodiacId = zodiacList.getJSONObject(3).getString("zodiacId");
-            content = zodiacList.getJSONObject(3).getString("content");
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        content_tmr.setText(content);
-    }*/
-   /* private void getHoroscopeDetails() {
-        Call<ZodiacDetailsData> call = ApiClient.getMyInterface().getSign("Leo", "Tomorrow");
-        call.enqueue(new Callback<ZodiacDetailsData>() {
-            @Override
-            public void onResponse(@NonNull Call<ZodiacDetailsData> call, @NonNull Response<ZodiacDetailsData> response) {
-                ZodiacDetailsData model=response.body();
-
-                if (model != null) {
-                    String description=model.getDescription();
-                    content_tmr.setText(description);
-                }
-            }
-            @Override
-            public void onFailure(@NonNull Call<ZodiacDetailsData> call, @NonNull Throwable t) {
-
-            }
-        });
-    }*/
 }

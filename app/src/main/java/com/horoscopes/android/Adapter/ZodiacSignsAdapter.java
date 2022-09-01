@@ -43,7 +43,8 @@ public class ZodiacSignsAdapter extends RecyclerView.Adapter<ZodiacSignsAdapter.
         holder.itemView.setOnClickListener(view -> {
         Intent intent = new Intent(context, HoroscopeDetailActivity.class);
         intent.putExtra("id",item.getId());
-        intent.putExtra("image",item.getZodiacSign());
+        intent.putExtra("icon",item.getZodiacSign());
+        intent.putExtra("name",item.getZodiacName());
         context.startActivity(intent);
     });
     }
@@ -51,7 +52,6 @@ public class ZodiacSignsAdapter extends RecyclerView.Adapter<ZodiacSignsAdapter.
     public int getItemCount() {
         return zodiacModelList.size();
     }
-
     public static class viewHolder extends RecyclerView.ViewHolder {
         ImageView zodiac_icon;
         TextView zodiac_name;

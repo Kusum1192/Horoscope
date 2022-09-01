@@ -20,110 +20,137 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp"
-        android:background="@android:color/transparent"
+        android:layout_margin="25dp"
+        android:padding="5dp"
         app:layout_constraintTop_toBottomOf="@id/ud_toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
     >
-
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/user_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:civ_border_width="2dp"
+            app:civ_border="true"
+            app:civ_circle_color="@color/white"
+            android:src="@drawable/profile_ic"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/profile_icon"
+            />
     <EditText
-        android:id="@+id/user_name"
+        android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/EditTextLayout"
         android:hint="@string/what_is_your_name"
-        android:textColor="@color/white"
-        android:inputType="text"
-                />
-
-    <RadioGroup
-        android:id="@+id/user_gender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:padding="10dp"
         android:layout_marginTop="20dp"
-        android:checkedButton="@id/male"
-        android:orientation="horizontal"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@id/user_name">
+        android:textColor="@color/white"
+        android:background="@drawable/bg_text"
+        android:inputType="text"
+        android:autofillHints="Username" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_text"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Gender"
-            android:paddingVertical="12dp"
-            android:paddingRight="8dp"
+            android:text="@string/gender"
+            android:padding="10dp"
             android:textColor="@color/white"
             android:background="@android:color/transparent"
             android:textSize="16sp"
             />
+    <RadioGroup
+        android:id="@+id/userGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/male"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/user_name">
+
         <RadioButton
             android:id="@+id/male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
-            android:text="Male"
+            android:text="@string/male"
             android:padding="10dp"
             android:textStyle="bold"
             app:buttonTint="@color/white"
+            android:checked="true"
             />
         <RadioButton
-            android:id="@+id/female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:text="Female"
+            android:text="@string/female"
             android:padding="10dp"
             app:buttonTint="@color/white"
             />
+        <!--<TextView
+            android:id="@+id/genderAlert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Select Gender"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            android:visibility="gone" />-->
 
     </RadioGroup>
+        </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@android:color/transparent"
+        android:background="@drawable/bg_text"
         android:orientation="horizontal">
     <TextView
         android:id="@+id/date_picker"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textColor="@color/white"
-        android:text="@string/select_your_date_of_birth"
+        android:text="@string/date_of_birth"
         android:textStyle="bold"
         android:background="@android:color/transparent"
-        android:paddingVertical="12dp"
+        android:padding="12dp"
         app:layout_constraintTop_toBottomOf="@id/user_gender"
         app:layout_constraintStart_toStartOf="parent"
         />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/datePickerButton"
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="01/01/1992"
-        android:textSize="16sp"
+        android:text=""
+        android:textSize="14sp"
         android:textStyle="bold"
-        android:backgroundTint="@android:color/transparent"
+        app:backgroundTint="@color/white"
         android:textColor="@color/white"
-        android:layout_marginEnd="5dp"
         style="?attr/spinnerStyle"
         android:onClick="openDatePicker"
         />
     </LinearLayout>
-    <EditText
-        android:id="@+id/user_place"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/where_were_you_born"
-        android:textColorHint="@color/white"
-        android:inputType="text"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/date_picker"
-        />
+
+        <TextView
+            android:id="@+id/tv_select_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/where_were_you_born"
+            android:textColorHint="@color/white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_text"
+            app:layout_constraintTop_toBottomOf="@id/date_picker"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/submitBtn"
@@ -140,8 +167,8 @@
         android:backgroundTint="@color/purple_500"
         android:layout_marginTop="20dp"
         android:padding="15dp"
-        android:text="Submit"
-        app:layout_constraintTop_toBottomOf="@id/user_place"
+        android:text="@string/submit"
+        app:layout_constraintTop_toBottomOf="@id/tv_select_city"
         />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

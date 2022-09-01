@@ -4,13 +4,6 @@
     tools:showIn="navigation_view">
 
 <group android:checkableBehavior="single">
-    <item android:id="@+id/menu_horoscope"
-        android:icon="@drawable/horoscope_ic"
-        android:title="Horoscope"/>
-
-    <item android:id="@+id/menu_tarot_card"
-        android:icon="@drawable/tarot_card_ic"
-        android:title="Tarot Card"/>
 
     <item android:id="@+id/menu_profile"
         android:icon="@drawable/profile_ic"
@@ -24,10 +17,13 @@
         android:icon="@drawable/rate_us_ic"
         android:title="Rate Us"/>
     <item android:id="@+id/menu_pp"
-        android:icon="@drawable/pp_ic"
+        android:icon="@drawable/privacy_policy_ic"
         android:title="Privacy Policy"/>
     <item android:id="@+id/menu_tns"
-        android:icon="@drawable/t_n_s_ic"
+        android:icon="@drawable/term___condition_ic"
         android:title="Terms of Services"/>
+    <item android:id="@+id/about_us"
+        android:icon="@drawable/contact_us_ic"
+        android:title="Contact Us"/>
 </group>
 </menu>

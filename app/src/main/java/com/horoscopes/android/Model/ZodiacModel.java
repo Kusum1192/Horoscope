@@ -1,17 +1,17 @@
 package com.horoscopes.android.Model;
 
 public class ZodiacModel {
-int ZodiacSign;
+String ZodiacSign;
 String ZodiacName;
 String ZodiacContent;
 int id;
 
 
 
-    public ZodiacModel(int zodiacSign, String zodiacName, int id, String zodiacContent ) {
-        ZodiacSign = zodiacSign;
-        ZodiacName = zodiacName;
-        ZodiacContent = zodiacContent;
+    public ZodiacModel(String zodiacSign, String zodiacName, int id, String zodiacContent ) {
+        this.ZodiacSign = zodiacSign;
+        this.ZodiacName = zodiacName;
+        this.ZodiacContent = zodiacContent;
         this.id=id;
     }
 
@@ -23,11 +23,11 @@ int id;
         this.id = id;
     }
 
-    public int getZodiacSign() {
+    public String getZodiacSign() {
         return ZodiacSign;
     }
 
-    public void setZodiacSign(int zodiacSign) {
+    public void setZodiacSign(String zodiacSign) {
         ZodiacSign = zodiacSign;
     }
 
