@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -46,6 +47,7 @@ public class ProfileActivity extends AppCompatActivity {
     String date;
     String Username;
     String name, DOB, city, gender;
+    ProgressBar progressBar;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -60,6 +62,7 @@ public class ProfileActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         toolbar_pd = findViewById(R.id.ud_toolbar);
+        progressBar =findViewById(R.id.progressBar);
         toolbar_pd.setTitle("User Details");
         setSupportActionBar(toolbar_pd);
         toolbar_pd.setNavigationIcon(R.drawable.ic_back);
@@ -95,15 +98,13 @@ public class ProfileActivity extends AppCompatActivity {
             }*/
             else if (select_city.isEmpty()) {
                 tv_select_city.setError("Choose city*");
-               // tv_select_city.requestFocus();
-                tv_select_city.clearFocus();
+                tv_select_city.requestFocus();
+               // tv_select_city.clearFocus();
             } else {
                 postProfile("POST");
             }
         });
-
     }
-
     private String getTodayDate() {
         Calendar cal = Calendar.getInstance();
         int day = cal.get(Calendar.DAY_OF_MONTH);
@@ -218,6 +219,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
     private void postProfile(String actionType) {
+        progressBar.setVisibility(View.GONE);
         name=username.getText().toString();
         gender=((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId())).getText().toString();
         DOB=dateButton.getText().toString();

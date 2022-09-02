@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         });
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
+       // throw new RuntimeException("Test Crash"); // Force a crash
     }
     public void shareAppOther() {
         try {
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
            System.out.println(e);
         }
     }
+
     private boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_profile:
@@ -133,12 +135,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_pp:
                     CustomTabsIntent.Builder customIntent = new CustomTabsIntent.Builder();
                     customIntent.setToolbarColor(ContextCompat.getColor(MainActivity.this, R.color.purple_500));
-                    openCustomTab(MainActivity.this, customIntent.build(), Uri.parse("https://horoscopee.herokuapp.com/privacy_policy"));
+                    openCustomTab(MainActivity.this, customIntent.build(), Uri.parse("https://mobnews.app/astroapp/privacy_policy"));
                 break;
             case R.id.menu_tns:
                 CustomTabsIntent.Builder custIntent=new CustomTabsIntent.Builder();
                 custIntent.setToolbarColor(ContextCompat.getColor(MainActivity.this, R.color.purple_500));
-                openCustomTab(MainActivity.this,custIntent.build(),Uri.parse("https://horoscopee.herokuapp.com/terms_conditions\n"));
+                openCustomTab(MainActivity.this,custIntent.build(),Uri.parse("https://mobnews.app/astroapp/terms_conditions\n"));
                 break;
             case R.id.about_us:
                 alertDialog=new AlertDialog.Builder(MainActivity.this);
@@ -155,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 );
                 alertDialog.setPositiveButton("Ok", (dialogInterface, i) -> alertDialog.setOnDismissListener(DialogInterface::dismiss));
                 AlertDialog dialog=alertDialog.create();
-                dialog.setCanceledOnTouchOutside(true);
+                dialog.setCanceledOnTouchOutside(false);
                 dialog.setOnShowListener(dialogInterface -> {
                     dialog.getButton(android.app.AlertDialog.BUTTON_POSITIVE).setTextColor(getColor(R.color.purple_700));
                 });

@@ -113,7 +113,7 @@ public class TarotDetailActivity extends AppCompatActivity {
           adapterPosition = String.valueOf(intent.getIntExtra("position", 0));
         //    Log.e(TAG, "onCreate: "+adapterPosition );
         }
-        Picasso.get().load(cards[Integer.parseInt(adapterPosition)]).into(imageView);
+        Picasso.get().load(cards[Integer.parseInt(adapterPosition)]).placeholder(R.drawable.bg_card).into(imageView);
        // imageView.setImageResource(cards(adapterPosition));
         getJsonFileFromLocally(adapterPosition);
     }
